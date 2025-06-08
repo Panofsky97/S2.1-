@@ -7,11 +7,15 @@ function puedeConducir(){
 }
 
 function descubreElMayor(){
-    let number1 = parseInt(document.getElementById("number1").value);
-    let number2 = parseInt(document.getElementById("number2").value);
+    let num1 = parseFloat(document.getElementById("number1").value);
+    let num2 = parseFloat(document.getElementById("number2").value);
     let message = ""
 
-    number1 > number2 ? "El primer número es mayor que el segundo" : "El segundo número es mayor que el primero";
+    if (num1 === num2){
+        message = "Son dos valores son iguales";
+    } else {
+        message = num1>num2 ? "El primer número es mayor que el segundo" : "El segundo número es mayor que el primero";
+    }
 
     document.getElementById("numberMessage").innerHTML= message;
 }

@@ -11,6 +11,7 @@ function sumarValores(){
 }
 
 /*Exercise 2*/
+
 function randomNumber(){
 
   let getNumber = () =>  Math.floor((Math.random() * 100) + 1);

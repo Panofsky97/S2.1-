@@ -7,15 +7,19 @@ function puedeConducir(){
 }
 
 function descubreElMayor(){
-    let num1 = parseFloat(document.getElementById("number1").value);
-    let num2 = parseFloat(document.getElementById("number2").value);
+    let num1 = parseInt(document.getElementById("numTernario1").value);
+    let num2 = parseInt(document.getElementById("numTernario2").value);
     let message = ""
 
-    if (num1 === num2){
-        message = "Son dos valores son iguales";
+    if (isNaN(num1) || isNaN(num2)) {
+        message = "Por favor, introduce dos números válidos.";
+    } else if (num1 === num2){
+        message = "Los dos valores son iguales";
     } else {
         message = num1>num2 ? "El primer número es mayor que el segundo" : "El segundo número es mayor que el primero";
     }
 
     document.getElementById("numberMessage").innerHTML= message;
-}
+} 
+
+// const descubreElMayor2 = (num1, num2) => num1 > num2 ? "Son dos valores son iguales" : "El numero mayor es: ${}"

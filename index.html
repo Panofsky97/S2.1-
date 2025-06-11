@@ -16,9 +16,9 @@
     <p id="randomResult"></p>
 
     <h3>Saludémonos</h3>
-    <input type="text" id="name" placeholder="Enter your name">
+    <input type="text" id="name1" placeholder="Enter your name">
     <input type="button" value="Saludar" onclick="saludos()">
-    <p id="message"></p>
+    <p id="greetMessage"></p>
 
     <h1>Operadores Ternarios</h1>
 
@@ -28,17 +28,38 @@
     <p id="ageMessage"></p>
 
     <h3>¿Qué número es mayor?</h3>
-    <input type="number" id="number1" placeholder="Enter the first number">
-    <input type="number" id="number2" placeholder="Enter the second number">
+    <input type="number" id="numTernario1" placeholder="Enter the first number">
+    <input type="number" id="numTernario2" placeholder="Enter the second number">
     <input type="button" value="Descubrir" onclick="descubreElMayor()">
     <p id="numberMessage"></p>
 
+    <h1>Call Backs</h3>
+    <h3>Saludos</h1>
+    <input type="text" id="callBackName" placeholder="Enter your name">
+    <input type="button" value="Saludar" onclick="procesar(saludar)">
+    <p id="greet2"></p>
 
+    <h3>Suma los dos números</h3>
+    <input type="number" id="callBackNumber1" placeholder="Enter a number">
+    <input type="number" id="callBackNumber2" placeholder="Enter a number">
+    <input type="button" value="Sumar" onclick="procesarNumeros(calculadora)">
+    <p id="resultadoCalculadora"></p>
+
+
+    <h1>Operadores Rest & Spread</h1>
+    <h3>Mostrar los arrays</h3>
+    <input type="button" value="Mostrar" onclick="mostrarArrays()">
+    <p id="mostrar"></p>
+
+    
 </head>
 <body>
 
     <script src="arrow_functions.js"></script>
+    <script src="callbacks.js"></script>
     <script src="ternary_operator.js"></script>
+    <script src="operadores_rest&spread.js"></script>
+
     
 </body>
 </html>

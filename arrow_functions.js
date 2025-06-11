@@ -42,11 +42,11 @@ class Person{
   } 
 }
 
-  let username = document.getElementById("name").value;
+  let username = document.getElementById("name1").value;
   let newName = new Person(name);
   let finalMessage = newName.greet(username);
 
-  document.getElementById("message").innerHTML = finalMessage; 
+  document.getElementById("greetMessage").innerHTML = finalMessage; 
   
 }
 

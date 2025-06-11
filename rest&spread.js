@@ -11,4 +11,16 @@ function mostrarArrays (){
 
 }
 
+function restFunction (...finalNumbers){
+    let numbers = document.getElementById("restNumbers").value;
+    finalNumbers = numbers.split(",").map(num => parseFloat(num.trim()));
+
+    let suma = finalNumbers.reduce((acumulador, actual) => {
+       return acumulador + actual; 
+    }, 0);
+
+    document.getElementById("resultRest").innerHTML= "La suma de los valores introducidos es " + suma;
+}
+
+
 

@@ -22,4 +22,10 @@ function descubreElMayor(){
     document.getElementById("numberMessage").innerHTML= message;
 } 
 
-// const descubreElMayor2 = (num1, num2) => num1 > num2 ? "Son dos valores son iguales" : "El numero mayor es: ${}"
+function positivoNegativo (){
+    let numero = parseInt(document.getElementById("numeroOperadorTernario").value);
+
+    let respuesta = numero > 0 ? "Es positivo":
+                    numero < 0 ? "Es negativo":
+                    numero = 0 ? "Es igual a 0":                  
+}

@@ -50,6 +50,22 @@ class Person{
   
 }
 
+function printNumbers(){
+  const numbers = [1,2,3,4,5];
+
+  numbers.forEach((number) => {
+    console.log(number)
+  });
+
+}
+
+function mensaje3Segundos (){
+  setTimeout(( )=> {
+    console.log("Hello world");
+  },3000)
+}
+
+
 
 
 

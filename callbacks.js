@@ -21,3 +21,30 @@ function procesarNumeros(callback){
 }
 
 procesarNumeros(calculadora);
+
+
+async function saludo2() {
+  console.log("Esperando...");
+  await esperar(2000);
+  console.log("¡Has esperado 2 segundos!");
+}
+
+function procesarElementos(array, callback){
+    for (let i = 0; i < array.length; i++) {
+        callback(array[i]);
+    }
+}
+
+function mostrarNumeros(){
+    const numbers = [2,6,7,8];
+    procesarElementos (numbers, function(number){
+        console.log(number);
+    })
+}
+
+function procesarCadena(array,callback){
+    let cadena = "";
+    for (let i = 0; i < array.length; i++) {
+        cadena = array[i].toUpperCase;
+    }
+}

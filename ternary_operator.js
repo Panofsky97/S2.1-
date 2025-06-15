@@ -27,5 +27,29 @@ function positivoNegativo (){
 
     let respuesta = numero > 0 ? "Es positivo":
                     numero < 0 ? "Es negativo":
-                    numero = 0 ? "Es igual a 0":                  
+                                 "Es igual a 0";  
+    
+    document.getElementById("resultadoPositivoNegativo").innerHTML=respuesta;
+} 
+
+
+function numeroMayor(num1,num2,num3){
+    num1 = 5;
+    num2 = 10;
+    num3 = 2;
+
+    let resultado = num1 > num2 && num1 > num3? "El primer número es mayor":
+                    num2 > num1 && num2 > num3? "El segundo número es mayor":
+                                                "El tercer número es mayor";
+
+    console.log(resultado);
+}
+ 
+function parOImpar(){
+    const numbers = [1,2,3,4,5,6];
+
+    for (let i = 0; i < numbers.length; i++) {
+        let resultado = (numbers[i] % 2 == 0)? "Es par": "Es impar";
+        console.log(`${numbers[i]}: ${resultado}`)
+    }
 }

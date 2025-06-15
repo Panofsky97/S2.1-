@@ -22,5 +22,53 @@ function restFunction (...finalNumbers){
     document.getElementById("resultRest").innerHTML= "La suma de los valores introducidos es " + suma;
 }
 
+function modificarObjetos(){
+    const objeto1 = {
+        nombre : "David",
+        edad: 32,
+        altura: 182,
+    }
+
+    const objeto2 ={
+        ...objeto1
+    }
+
+    objeto2.altura = 165;
+
+    console.log(objeto1);
+    console.log(objeto2);
+}
+
+function resultadosCompeticion(){
+    const corredores = ["Luis" , "Jorge" , "Kike", "Oscar", "Roger"];
+    const [primero, segundo, tercero, ...resto] = corredores;
+
+    console.log(primero);
+    console.log(segundo);
+    console.log(tercero);
+    console.log(resto);
+}
+
+function fusionObjetos (){
+
+    const objeto1 = {
+        Nombre: "Alicia",
+        Edad: 25,
+        Nacionalidad: "peruana",
+    }
+
+    const objeto2 = {
+        Apellido: "Retamozo",
+        Hobbie: "Cantar",
+        Profesión: "Profesora",
+    }
+
+    const objeto3 = [...objeto1, ...objeto2];
+
+    console.log(objeto1);
+    console.log(objeto2);
+    console.log(objeto3);
+}
+
 
 

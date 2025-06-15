@@ -45,6 +45,15 @@ function mostrarNumeros(){
 function procesarCadena(array,callback){
     let cadena = "";
     for (let i = 0; i < array.length; i++) {
-        cadena = array[i].toUpperCase;
+        cadena = array[i].toUpperCase();
+        callback(cadena)
     }
+}
+
+function mostrarCadena(){
+    const letters = ["a", "b", "c", "d", "e"];
+
+    procesarCadena(letters, function(cadena){
+        console.log(cadena);
+    })
 }

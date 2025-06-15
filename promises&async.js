@@ -1,52 +1,61 @@
-    async function saludo() {
+function saludoPromesa(){
+    const promesa = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Hello world");
+        }, 2000);
+    })
 
-    try{
-        const hello = await esperar(2000);
-        console.log("Hello world");
-    }catch(error){
-        console.error("Goodbye world");
-    } 
+    promesa.then((mensaje) =>{
+        console.log(mensaje)
+    })
+}
 
-    saludo()
+function saludoPromesa2(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Hello world");
+        }, 2000);
+    })
+}
 
-    esperar(2000)
-     .then(msg => console.log(msg))
-     .catch(err => console.error(err));
+async function mostrarSaludo(){
+    console.log("Esperando respuesta...");
 
-    }
+    let respuesta = await saludoPromesa2();
 
-    function esperar(ms) {
-      return new Promise((resolve) => {
-      setTimeout(() => {
-      resolve(`Esperaste ${ms} milisegundos`);
-      }, ms);
+    console.log("Respuesta recibida: " + respuesta);
+
+} 
+
+mostrarSaludo();
+
+async function saludoCondicional (){
+    let nombre = document.getElementById("holaPromise").value;
+    const saludo = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (nombre == "Hola"){
+                resolve("Hello world");
+            }else{
+
+                reject("Error")
+            }
+        }, 2000);
+    })
+
+    saludo.then((mensaje) =>{
+        console.log(mensaje)
     });
+
+    try {
+        let resultado = await saludo;
+        console.log("Respuesta recibida: ");
     }
 
-    async function saludo() {
+    catch(error) {
+        console.log(error)
+    };
 
-        let saludo = document.getElementById("hola").value;
-
-        try{
-            const hello = await esperar(2000);
-            console.log("Hello world");
-
-           }catch(error){
-           console.error("Goodbye world");
-           } 
-
-           saludo()
-
-           esperar(2000)
-           .then(msg => console.log(msg))
-           .catch(err => console.error(err));
-
-    }
-
-
-
-
-
+}
    
 
 

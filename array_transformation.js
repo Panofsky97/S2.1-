@@ -29,3 +29,22 @@ function reduceFunction(){
 
     console.log(suma);
 }
+
+
+function calcular(){
+     const nums = [1,3,7,10,15,17,11,5,8,12,9];
+
+     const procesar = nums => nums.filter(n => n >= 10).map(n => n * 2).reduce((a, b) => a + b, 0);
+
+     console.log(procesar(nums))
+}
+
+function detectarMayor(){
+    const nums = [11,12,13,14];
+
+    const hayMayor = nums.some(n => n > 10);
+    const todosMayores = nums.every(n => n > 10);
+
+    console.log(hayMayor);
+    console.log(todosMayores);
+}

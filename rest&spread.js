@@ -63,7 +63,7 @@ function fusionObjetos (){
         Profesión: "Profesora",
     }
 
-    const objeto3 = [...objeto1, ...objeto2];
+    const objeto3 = {...objeto1,...objeto2};
 
     console.log(objeto1);
     console.log(objeto2);

@@ -56,6 +56,33 @@ async function saludoCondicional (){
     };
 
 }
-   
+
+
+function promesa1() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Promesa 1 resuelta después de 2 segundos");
+        }, 2000);
+    });
+}
+
+function promesa2() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Promesa 2 resuelta después de 3 segundos");
+        }, 3000);
+    });
+}
+
+Promise.all([promesa1(), promesa2()])
+    .then((resultados) => {
+        console.log("Todas las promesas se resolvieron:");
+        resultados.forEach((resultado, index) => {
+            console.log(`Resultado ${index + 1}:`, resultado);
+        });
+    })
+    .catch((error) => {
+        console.error("Una de las promesas falló:", error);
+    });
 
 
